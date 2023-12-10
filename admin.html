@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roster</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg,yellow , red);
+        }
+
+        header {
+            display: flex;
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        header img {
+            max-height: 50px;
+            margin-right: 10px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        nav {
+            padding: 15px;
+            margin: 20px 0;
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 15px;
+            border-radius: 10px 10px 0 0;
+        }
+
+        nav a:hover {
+            background-color: #777;
+            margin: 10px;
+            border-radius: 10px;
+        }
+
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: stretch;
+            justify-content: space-around;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .roster-card {
+            width: 300px;
+            height: 550px;
+            background-color: #fff;
+            border-radius: 10px;
+            margin: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            perspective: 1000px;
+            cursor: pointer;
+        }
+
+        .roster-card:hover .roster-inner {
+            transform: rotateY(180deg);
+        }
+
+        .roster-inner {
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            height: 100%;
+        }
+
+        .roster-front,
+        .roster-back {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: center;
+        }
+
+        .roster-front {
+            transform: rotateY(0deg);
+        }
+
+        .roster-back {
+            transform: rotateY(180deg);
+        }
+
+        .roster-img {
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .roster-details {
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            font-size: 15px;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        h2, p {
+            margin: 0;
+            font-size: 15px;
+        }
+        .bio {text-align: left  ;
+            padding: 10px;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="LOGO/R.png" alt="">
+            <img src="LOGO/CIT.png" alt="">
+        </div>
+        <h1>COLLEGE OF INDUSTRIAL TECHNOLOGY</h1>
+        <nav>
+            <a href="family.html">PROGRAM COORDINATOR</a>
+            <a href="home.html">HOME</a>
+        </nav>
+    </header>
+
+    <section>
+        <div class="roster-card">
+            <div class="roster-inner">
+                <div class="roster-front">
+                    <img class="roster-img" src="img admin/pacis.jpg">
+                    <div class="roster-details">
+                        <h2>Dr. CESARIO Y. PACIS</h2>
+                        <p>Dean</p>
+                        <p>Email Address: cestar88@yahoo.com</p>
+                    </div>
+                </div>
+                <div class="roster-back">
+                    <div class="roster-details">
+                        <h2>Dr. CESARIO Y. PACIS</h2>
+                        <p><strong>BIO DATA</strong></p>
+                        <div class="bio">
+                            <p>Date of Birth : February 25, 1963
+                            <p>Place of Birth : Bacarra, Ilocos Norte</p>
+                            <p>Age : 57 years</p>
+                            <p>Civil Status : Married</p>
+                            <p>Father : Federico B. Pacis (deceased)</p>
+                            <p>Mother : Teodora S. Yanos (deceased)</p>
+                            <p>Home Address : Brgy. 39 Pasiocan Bacarra, Ilocos Norte</p>
+                            <p>Spouses Name	:		Estrella R. Pacis</p>
+                            <p>Number of Years in Teaching : 36</p>
+                            <p>License/Eligibility : PD 907</p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="roster-card">
+            <div class="roster-inner">
+                <div class="roster-front">
+                    <img class="roster-img" src="img admin/aldous.jpg">
+                    <div class="roster-details">
+                        <h2>Prof. ALDOUS dV. ASUNCION</h2>
+                        <p>	College Secretary</p>
+                        <p>Email Address: aldous.cit.mmsu@gmail.com</p>                    
+                    </div>
+                </div>
+                <div class="roster-back">
+                    <div class="roster-details">
+                        <h2>Prof. ALDOUS dV. ASUNCION</h2>
+                        <p><strong>BIO DATA</strong></p>
+                        <div class="bio">
+                        <p>Date of Birth : July 17, 1975 </p>
+                        <p>Place of Birth : Laoag City</p>
+                        <p>Age : 44 years</p>
+                        <p>Civil Status : Married</p>
+                        <p>Father : Camilo R. Asuncion</p>
+                        <p>Mother : Rosita dV. Asuncion</p>
+                        <p>Brothers : Ritche Romilo dV. Asuncion</p>
+                        <p>Aldwin Gideon dV. Asuncion</p>
+                        <p>Khamill Angelo dV. Asuncion</p>
+                        <p>Sister : Vera A. Manligas</p>
+                        <p>Spouse : Alma C. Asuncion</p>
+                        <p>Children : Aeron Granier C. Asuncion</p>
+                        <p>Aiden Grant C. Asuncion</p>
+                        <p>Home Address : 24 Paterno St, Bgy. 25 Sta. Cayetana, Laoag City</p>
+                        <p>Number of Years in Teaching : 21</p>
+                        <p>License/Eligibility : Career Service (Professional)</p>
+                        <p>Visual Graphics Design NC III</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="roster-card">
+            <div class="roster-inner">
+                <div class="roster-front">
+                    <img class="roster-img" src="img admin/hallar.jpg">
+                    <div class="roster-details">
+                        <h2>Dr. BYRON JOSEPH A. HALLAR</h2>
+                        <p>	Department Chair, Industrial Tech.</p>
+                        <p>Email Address: bjahallar@mmsu.edu.ph</p>        
+                    </div>
+                </div>
+                <div class="roster-back">
+                    <div class="roster-details">
+                        <h2>Dr. BYRON JOSEPH A. HALLAR</h2>
+                        <p><strong>BIO DATA</strong></p>
+                        <div class="bio">
+                            <p>Date of Birth : May 22, 1974 </p>
+                            <p>Place of Birth : Laoag City</p>
+                            <p>Age : 45 years</p>
+                            <p>Civil Status : Single</p>
+                            <p>Father : Francisco S. Hallar (deceased)</p>
+                            <p>Mother : Vicenta A. Albano</p>
+                            <p>Home Address : 013 Rizal Boulevard Brgy 5, Bacarra, Ilocos Norte</p>
+                            <p>Number of Years in Teaching : 23</p>
+                            <p>License/Eligibility : Career Service (Professional)</p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="roster-card">
+            <div class="roster-inner">
+                <div class="roster-front">
+                    <img class="roster-img" src="img admin/huenda.jpg">
+                    <div class="roster-details">
+                        <h2>Prof. FERDINAND P. HUENDA</h2>
+                        <p>	Department Chair, Industrial Tech.</p>
+                        <p>Email Address: ferdinandhuenda@yahoo.com</p>                    
+                    </div>
+                </div>
+                <div class="roster-back">
+                    <div class="roster-details">
+                        <h2>Prof. FERDINAND P. HUENDA</h2>
+                        <p><strong>BIO DATA</strong></p>
+                        <div class="bio">
+                            <p>Date of Birth : June 26, 1968 </p>
+                            <p>Place of Birth : Laoag City</p>
+                            <p>Age : 51 years</p>
+                            <p>Father				:		Paterno H. Huenda</p>
+                            <p>Mother			:		Anita P. Huenda</p>
+                            <p>Spouse				:		Eileen H. Huenda</p>
+                            <p>Children			:		Frederick H. Huenda</p>
+                            <p>                        Melchor Angelo H. Huenda</p>
+                            <p>                     Jhon Marc H. Huenda</p>
+                            <p>                     Adrian H. Huenda</p>
+                            <p>                     Dondee H. Huenda</p>
+                            <p>                     Noel H. Huenda</p>
+                            <p>Home Address			:		Brgy. 29 #332 Soliman Street, Laoag City </p>
+                            <p>Number of Years in Teaching	:		24</p>
+                            <p>License/Eligibility		:		Board of Professional Teachers</p>
+                            <p>                       Trainers’ Methodology Level I</p>
+                            <p>                       Automotive Servicing NC III</p>
+                            
+                            </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="roster-card">
+            <div class="roster-inner">
+                <div class="roster-front">
+                    <img class="roster-img" src="img admin/unknown girl.jpg">
+                    <div class="roster-details">
+                        <h2>Prof. NOVA M. CABIAS</h2>
+                        <p>	Department Chair, Industrial Tech.</p>
+                        <p>Email Address: novamateo@yahoo.com</p>                    
+                    </div>
+                </div>
+                <div class="roster-back">
+                    <div class="roster-details">
+                        <h2>Prof. NOVA M. CABIAS</h2>
+                        <p><strong>BIO DATA</strong></p>
+                        <div class="bio">
+                            <p>Date of Birth			:		November 12, 1980</p>
+                            <p>Place of Birth			:		Laoag City, Ilocos Norte</p>
+                            <p>Age				:		39 years</p>
+                            <p>Civil Status			:		Married</p>
+                            <p>Father				:		Franklin J. Mateo</p>
+                            <p>Mother			:		Zenaida Leah M. Mateo	</p>
+                            <p>Husband			:		Glenn Mc Neil S. Cabias</p>
+                            <p>Child				:		Sophia Alecksandra M. Cabias</p>	
+                            <p>Home Address			:		 Bgy. 59-A Dibua South, Laoag City</p>
+                            <p>Number of Years in Teaching	:		10</p>
+                            <p>License/Eligibility		:		Board of Professional Teachers</p>
+						    <p>Board of Registered Guidance Counselors</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="roster-card">
+            <div class="roster-inner">
+                <div class="roster-front">
+                    <img class="roster-img" src="img admin/guillen.jpg">
+                    <div class="roster-details">
+                    <h2>Mr. CHRISTIAN JADE D. GUILLEN</h2>
+                    <p>	Coordinator, Planning & Development</p>
+                    <p>Email Address: jade.ilocos@gmail.com</p>
+                </div>
+            </div>
+                <div class="roster-back">
+                    <div class="roster-details">
+                        <h2>Mr. CHRISTIAN JADE D. GUILLEN</h2>
+                        <p><strong>BIO DATA</strong></p>
+                        <div class="bio">
+                            <p>Date of Birth			:	June 22, 1991</p>
+                            <p>Place of Birth			:	Laoag City, Ilocos Norte</p>
+                            <p>Age				:	28 years</p>
+                            <p>Civil Status			:	Single	</p>
+                            <p>Father				:	Reynaldo P. Guillen (deceased)	</p>
+                            <p>Mother			:	Rosita D. Guillen	</p>
+                            <p>Home Address			:	Bgy. 5, #11 C.A. Samonte St., Laoag City</p>
+                            <p>Number of Years in Teaching	:	3	</p>
+                            <p>License/Eligibility		:	Visual Graphics and Design NC III</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="roster-card">
+            <div class="roster-inner">
+                <div class="roster-front">
+                    <img class="roster-img" src="img admin/unknown girl.jpg">
+                    <div class="roster-details">
+                        <h2>Ms. CHRISTINE Q. BAÑEZ	</h2>
+                        <p>	Coordinator, College Research</p>
+                        <p>Email Address: N/A</p>
+                    </div>
+                </div>
+                <div class="roster-back">
+                    <div class="roster-details">
+                        <h2>Ms. CHRISTINE Q. BAÑEZ</h2>
+                        <p><strong>BIO DATA</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="roster-card">
+            <div class="roster-inner">
+                <div class="roster-front">
+                    <img class="roster-img" src="img admin/domingo.jpg">
+                    <div class="roster-details">
+                        <h2>Prof. FAIRIE ANNE A. DOMINGO	</h2>
+                        <p>	Coordinator, College Extension</p>
+                        <p>Email Address: f.acebedo16@gmail.com</p>
+                    </div>
+                </div>
+                <div class="roster-back">
+                    <div class="roster-details">
+                        <h2>Prof. FAIRIE ANNE A. DOMINGO</h2>
+                        <p><strong>BIO DATA</strong></p>
+                        <div class="bio">
+                            <p>Date of Birth : July 16, 1984</p>
+                            <p>Place of Birth : Magsingal, Ilocos Sur</p>
+                            <p>Age : 35 years</p>
+                            <p>Civil Status : Married</p>
+                            <p>Spouse : Jay-ar M. Domingo</p>
+                            <p>Children : Julianna Felice A. Domingo</p>
+                            <p>Father : Fidel U. Acebedo</p>
+                            <p>Mother : Irma P. Acebedo</p>
+                            <p>Home Address : Bgy. 16-S Quiling Sur, Batac City</p>
+                            <p>Number of Years in Teaching : 10</p>
+                            <p>License/Eligibility : Board of Professional Teachers</p>
+                            <p>Career Service (CS) Professional (PD 907)</p>
+                            <p>Trainer’s Methodology (TM) Level I</p>
+                            <p>Bread and Pastry NC II</p>
+                        </div>   
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="roster-card">
+            <div class="roster-inner">
+                <div class="roster-front">
+                    <img class="roster-img" src="img admin/rabago.JPG">
+                    <div class="roster-details">
+                        <h2> Mr. JERYLVIN A. RABAGO	</h2>
+                        <p>	Coordinator, Student Affairs & Services</p>
+                        <p>Email Address: mr.popcap@gmail.com</p>
+                    </div>
+                </div>
+                <div class="roster-back">
+                    <div class="roster-details">
+                        <h2>Mr. JERYLVIN A. RABAGO</h2>
+                        <p><strong>BIO DATA</strong></p>
+                        <div class="bio">
+                            <p>Date of Birth : August 14, 1996</p>
+                            <p>Place of Birth : Laoag City</p>
+                            <p>Age : 24 years</p>
+                            <p>Civil Status : Single</p>
+                            <p>Father : Roman C. Rabago, Jr.</p>
+                            <p>Mother : Cherry A. Rabago</p>
+                            <p>Home Address : Brgy. 38-A Mangato, Laoag City</p>
+                            <p>Number of Years in Teaching : 2</p>
+                            <p>License/Eligibility : Board Licensure Examination for Professional Teachers</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="roster-card">
+            <div class="roster-inner">
+                <div class="roster-front">
+                    <img class="roster-img" src="img admin/baniaga.jpg">
+                    <div class="roster-details">
+                        <h2>Prof. RAYMUND R. BANIAGA	</h2>
+                        <p>Coordinator, On-the-Job Training.</p>
+                        <p>Email Address: raybani2@@yahoo.com</p>
+                    </div>
+                </div>
+                <div class="roster-back">
+                    <div class="roster-details">
+                        <h2>Prof. RAYMUND R. BANIAGA	</h2>
+                        <p><strong>BIO DATA</strong></p>
+                        <div class="bio">
+                            <p>Date of Birth : January 23, 1971</p>
+                            <p>Place of Birth : Luna, Kalinga-Apayao</p>
+                            <p>Age : 49 years</p>
+                            <p>Civil Status : Married</p>
+                            <p>Father : Julio Casamiro B. Baniaga</p>
+                            <p>Mother : Donata R. Baniaga</p>
+                            <p>Wife : Elenita Natnat Factores</p>
+                            <p>Children : Ray PJ M. Baniaga</p>
+                            <p>Niña Jessa M. Baniaga</p>
+                            <p>Czar Ian M. Baniaga</p>
+                            <P>Home Address : Brgy. 62-A, Navotas, Laoag City</P>
+                            <p>Number of Years in Teaching : 24</p>
+                            <p>License/Eligibility : Board of Professional Teachers</p>
+                            <p>Electronic Product Assembly and Servicing NC II</p>
+                            <p>Building Wiring NC II</p>
+                            <p>First Class Radio Telephone Operator </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2023 CHASSY DWAYNE VINUA
+    </footer>
+</body>
+</html>
